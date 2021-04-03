@@ -66,9 +66,9 @@ function html(cb) {
     return src(path.src.html, {base: srcPath})
         .pipe(plumber())
       
-       /* .pipe(htmlmin({
+       .pipe(htmlmin({
             collapseWhitespace: true
-          }))*/
+          }))
         .pipe(dest(path.build.html))
         .pipe(browserSync.reload({stream: true}));
 
@@ -251,7 +251,7 @@ function watchFiles() {
    
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, copyLibCss, copyLibJS));
+const build = gulp.series(clean, gulp.parallel(images, fonts, html, css, js,  copyLibCss, copyLibJS));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
