@@ -462,7 +462,7 @@ section {
 /*--/review--*/
 
 #reviews {
-    background: url('../images/bg-review.png')no-repeat 0px 0px;
+    background: url('../images/bg-review.webp')no-repeat 0px 0px;
     background-size: cover;
 }
 
@@ -477,8 +477,8 @@ section {
     margin: 1em 0;
     padding: 22px 25px;
     color: #ffffff;
-    background: rgba(27, 27, 27, 0.5);
-    height: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    height: 350px;
 }
 
 .review img {
@@ -669,6 +669,13 @@ a.mail:hover {
 
     .banner-text p {
         width: 550px;
+    }
+
+    .review p {
+        font-size: 16px;
+        text-align: left;
+        line-height: 1.5em;
+        height: 450px;
     }
 }
 
